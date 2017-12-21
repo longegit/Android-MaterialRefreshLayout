@@ -146,7 +146,9 @@ public class MaterialRefreshLayout extends FrameLayout {
             mSunLayout.setVisibility(View.GONE);
             setHeaderView(mSunLayout);
         } else {
-            mMaterialHeaderView = new MaterialHeaderView(context);
+            if(mMaterialHeaderView == null){
+                mMaterialHeaderView  = new MaterialHeaderView(context);
+            }
             LayoutParams layoutParams = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, Util.dip2px(context, hIGHER_HEAD_HEIGHT));
             layoutParams.gravity = Gravity.TOP;
             mMaterialHeaderView.setLayoutParams(layoutParams);
@@ -526,6 +528,7 @@ public class MaterialRefreshLayout extends FrameLayout {
     }
 
     private void setHeaderView(final View headerView) {
+        removeView(headerView);
         addView(headerView);
     }
 
