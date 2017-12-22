@@ -125,6 +125,7 @@ public class MaterialFoodView extends FrameLayout implements MaterialHeadListene
         circleProgressBar.setMax(progressValueMax);
         circleProgressBar.setCircleBackgroundEnabled(isShowProgressBg);
         circleProgressBar.setProgressBackGroundColor(progressBg);
+        circleProgressBar.setVisibility(GONE);
         addView(circleProgressBar);
     }
 
@@ -135,6 +136,7 @@ public class MaterialFoodView extends FrameLayout implements MaterialHeadListene
         }
         if (circleProgressBar != null) {
             circleProgressBar.onComlete(materialRefreshLayout);
+            circleProgressBar.setVisibility(GONE);
             ViewCompat.setTranslationY(circleProgressBar, 0);
             ViewCompat.setScaleX(circleProgressBar, 0);
             ViewCompat.setScaleY(circleProgressBar, 0);
@@ -181,6 +183,7 @@ public class MaterialFoodView extends FrameLayout implements MaterialHeadListene
         }
         if (circleProgressBar != null) {
             circleProgressBar.onRefreshing(materialRefreshLayout);
+            circleProgressBar.setVisibility(VISIBLE);
         }
     }
 
