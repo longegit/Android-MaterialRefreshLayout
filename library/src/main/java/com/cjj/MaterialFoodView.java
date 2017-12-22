@@ -182,8 +182,8 @@ public class MaterialFoodView extends FrameLayout implements MaterialHeadListene
             materialWaveView.onRefreshing(materialRefreshLayout);
         }
         if (circleProgressBar != null) {
+            circleProgressBar.setVisibility(VISIBLE);            
             circleProgressBar.onRefreshing(materialRefreshLayout);
-            circleProgressBar.setVisibility(VISIBLE);
         }
     }
 

@@ -194,8 +194,8 @@ public class MaterialHeaderView extends FrameLayout implements MaterialHeadListe
             materialWaveView.onRefreshing(materialRefreshLayout);
         }
         if (circleProgressBar != null) {
-            circleProgressBar.onRefreshing(materialRefreshLayout);
             circleProgressBar.setVisibility(VISIBLE);
+            circleProgressBar.onRefreshing(materialRefreshLayout);
         }
     }
 

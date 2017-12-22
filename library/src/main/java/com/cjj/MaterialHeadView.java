@@ -198,8 +198,8 @@ public class MaterialHeadView extends FrameLayout implements MaterialHeadListene
         }
         if(circleProgressBar != null)
         {
-            circleProgressBar.onRefreshing(materialRefreshLayout);
             circleProgressBar.setVisibility(VISIBLE);
+            circleProgressBar.onRefreshing(materialRefreshLayout);
         }
     }
 
